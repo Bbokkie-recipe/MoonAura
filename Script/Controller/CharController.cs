@@ -44,14 +44,9 @@ public class CharController : MonoBehaviour
             Vector3 mainCamAngle = mainCamBox.rotation.eulerAngles;
             float camBoxAnglex = mainCamAngle.x - mouseDelta.y;
             if (camBoxAnglex < 180f)
-            {
-                camBoxAnglex = Mathf.Clamp(camBoxAnglex, -1f, 70f);
-            }
+            {camBoxAnglex = Mathf.Clamp(camBoxAnglex, -1f, 70f);}
             else
-            {
-                camBoxAnglex = Mathf.Clamp(camBoxAnglex, 335f, 361f);
-            }
-
+            { camBoxAnglex = Mathf.Clamp(camBoxAnglex, 335f, 361f);}
             mainCamBox.rotation = Quaternion.Euler(camBoxAnglex-mouseDelta.y, mainCamAngle.y + mouseDelta.x, mainCamAngle.z);
         }
     }
