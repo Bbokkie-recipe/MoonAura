@@ -15,10 +15,6 @@ public class CharController : MonoBehaviour
     readonly int moveHash = Animator.StringToHash("Move");
     readonly int fallingHash = Animator.StringToHash("Falling");
     readonly int jumpHash = Animator.StringToHash("Jump");
-    void Start()
-    {
-
-    }
     public void Jump()
     {
         playerAni.SetTrigger(jumpHash);
@@ -46,7 +42,7 @@ public class CharController : MonoBehaviour
         {
             Vector2 mouseDelta = inputDir;
             Vector3 mainCamAngle = mainCamBox.rotation.eulerAngles;
-            //mainCamBox x√‡ »∏¿¸ ¡¶«—
+            //mainCamBox x√É√† √à¬∏√Ä√º √Å¬¶√á√ë
             float camBoxAnglex = mainCamAngle.x - mouseDelta.y;
             if (camBoxAnglex < 180f)
             {
