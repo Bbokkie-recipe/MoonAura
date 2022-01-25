@@ -42,7 +42,6 @@ public class CharController : MonoBehaviour
         {
             Vector2 mouseDelta = inputDir;
             Vector3 mainCamAngle = mainCamBox.rotation.eulerAngles;
-            //mainCamBox xÃà È¸Àü Á¦ÇÑ
             float camBoxAnglex = mainCamAngle.x - mouseDelta.y;
             if (camBoxAnglex < 180f)
             {
