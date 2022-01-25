@@ -43,7 +43,6 @@ public class VirtualJoyStick : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-       // onPlayerMove.Invoke();
         if (RectTransformUtility.RectangleContainsScreenPoint(padRangeRectTr, eventData.position)) pad.position = eventData.position;
         ControlStick(eventData);
         isInput = true;
@@ -56,7 +55,6 @@ public class VirtualJoyStick : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void OnEndDrag(PointerEventData eventData)
     {
-     //   onPlayerStop.Invoke();
         /*return pad origin pos*/
         pad.anchoredPosition = anchoredPos;
         pad.sizeDelta = sizeDeltaPos;

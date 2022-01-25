@@ -10,7 +10,7 @@ public class ZoomInOutCam : MonoBehaviour
     [SerializeField] private Transform camTr;
     [SerializeField] public Transform camtargetPlayer;
     [SerializeField] private float zoomSpeed;
-    //
+
     public float moveSensitivityX = 1.0f;
     public float moveSensitivityY = 1.0f;
     public bool updateZoomSensitivity = true;
@@ -23,7 +23,6 @@ public class ZoomInOutCam : MonoBehaviour
     public float xMin;
     public float xMax;
     Vector3 velocity = Vector3.zero;
-    //
 
     private void Start()
     {
@@ -31,7 +30,7 @@ public class ZoomInOutCam : MonoBehaviour
     }
     void FixedUpdate()
     {
-        //д╚╦ч╤С юл╩С ╩Себ -> ©Ь ю╖д║╥н
+        //Л╧╢К╘■К²╪ Л²╢Л┐│ Л┐│М┐° -> Л⌡░ Л°└Л╧≤К║°
         CameraSmoothDamp();
 
         PositionInfo = (camTr.position - camtargetPlayer.position).normalized;
